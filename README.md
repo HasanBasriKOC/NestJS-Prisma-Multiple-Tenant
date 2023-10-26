@@ -1,4 +1,4 @@
-# NestJS ve Prisma ORM ile MultiplyTenant
+# NestJS ve Prisma ORM ile Multiple Tenant
 
 NestJS altyapısı kullanılarak Prisma ORM ile MongoDB üzerinde çoklu tenant altyapısı örneği.
 
