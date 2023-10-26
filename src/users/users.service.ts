@@ -13,22 +13,20 @@ export class UsersService {
     return this.prisma.user.findMany();
   }
 
-  findOne(id: string) {
+  findOne(where: Prisma.UserWhereUniqueInput) {
     return this.prisma.user.findFirst({
-      where: {
-        id,
-      },
+      where,
     });
   }
 
-  update(id: string, updateUserDto: Prisma.UserUpdateInput) {
+  update(where: Prisma.UserWhereUniqueInput, data: Prisma.UserUpdateInput) {
     return this.prisma.user.update({
-      where: { id },
-      data: updateUserDto,
+      where,
+      data,
     });
   }
 
-  remove(id: string) {
-    return this.prisma.user.delete({ where: { id } });
+  remove(where: Prisma.UserWhereUniqueInput) {
+    return this.prisma.user.delete({ where });
   }
 }

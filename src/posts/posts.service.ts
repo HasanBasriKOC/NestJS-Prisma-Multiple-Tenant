@@ -13,15 +13,15 @@ export class PostsService {
     return this.prismaService.prisma.post.findMany();
   }
 
-  findOne(id: string) {
-    return this.prismaService.prisma.post.findFirst({ where: { id } });
+  findOne(where: Prisma.PostWhereUniqueInput) {
+    return this.prismaService.prisma.post.findFirst({ where });
   }
 
-  update(id: string, data: Prisma.PostUpdateInput) {
-    return this.prismaService.prisma.post.update({ where: { id }, data });
+  update(where: Prisma.PostWhereUniqueInput, data: Prisma.PostUpdateInput) {
+    return this.prismaService.prisma.post.update({ where, data });
   }
 
-  remove(id: string) {
-    return this.prismaService.prisma.post.delete({ where: { id } });
+  remove(where: Prisma.PostWhereUniqueInput) {
+    return this.prismaService.prisma.post.delete({ where });
   }
 }
