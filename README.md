@@ -23,3 +23,5 @@ npm install
 ```bash
 npm start prisma:build
 ```
+
+İstediğiniz gibi kullanabilirsiniz..
